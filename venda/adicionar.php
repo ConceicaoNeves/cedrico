@@ -33,7 +33,7 @@ include 'includes/message.php';
             <select  id="idLivro" name="idLivro">
             <option value="text" disabled selected>Escolha o Livro</option>
             <?php
-				$sql="SELECT idLivro, idLivro, titulo, valorVenda
+				$sql="SELECT idLivro, idLivro, titulo, preco
 				from livro";
 
 				$result=mysqli_query($connect,$sql);
@@ -49,10 +49,10 @@ include 'includes/message.php';
             </div>
 
             <div class="input-field col s12" >
-            <select  id="valorUnitario" name="valorUnitario">
+            <select  id="preco" name="preco">
             <option value="text" disabled selected>Preço</option>
             <?php
-				$sql="SELECT valorVenda,idLivro,titulo
+				$sql="SELECT preco,idLivro,titulo
 				from livro";
 
 				$result=mysqli_query($connect,$sql);
@@ -72,6 +72,10 @@ include 'includes/message.php';
                 <input id="icon_prefix" class="validate" type="date" name="dataVenda" id="dataVenda">
                 <label for="dataVenda">Data</label>
             </div>
+            <div class="input-field col s12">
+                    <input type="text" name="cpfComprador" id="cpfComprador">
+                    <label for="cpfComprador">Cpf Comprador</label>
+                </div>
             <button type="submit" name="btn-registrarnovavenda" class="btn deep-purple lighten-2"><i class="material-icons left">shopping_cart_checkout</i>Registrar Nova Venda</button>
             <a href="../venda/index.php" type="submit" class="btn"><i class="material-icons left">receipt_long</i>Lista de Vendas</a>
 

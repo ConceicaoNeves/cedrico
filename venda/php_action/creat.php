@@ -15,18 +15,18 @@ function clear($input) {
 
 
 if(isset($_POST['btn-registrarnovavenda'])):
-    $dLivro = clear($_POST['idLivro']);
-    $valorUnitario = clear($_POST['valorUnitario']);
+    $idLivro = clear($_POST['idLivro']);
+    $preco = clear($_POST['preco']);
     $dataVenda = clear($_POST['dataVenda']);
     $cpfComprador = clear($_POST['$cpfComprador']);
 
-    if(empty($idLivro) or empty($valorUnitario) or empty($dataVenda)):
+    if(empty($idLivro) or empty($preco) or empty($dataVenda)):
         $_SESSION['mensagem'] = "Venda não realizado!! Campos preenchidos incorretamente!";
         header('Location: ../index.php');
     else:
     
 
-        $sql = "INSERT INTO venda (idLivro, valorUnitario, dataVenda, cpfComprador) VALUES ('$idLivro', '$valorUnitario', '$dataVenda', '$cpfComprador')";
+        $sql = "INSERT INTO venda (idLivro, preco, dataVenda, cpfComprador) VALUES ('$idLivro', '$preco', '$dataVenda', '$cpfComprador')";
 
         if(mysqli_query($connect, $sql)):
             $_SESSION['mensagem'] = "Venda registrada!";

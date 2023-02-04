@@ -13,7 +13,7 @@ include_once 'includes/message.php';
     <a href="../home.php" class=""><i class="material-icons">arrow_back_ios</i></a>
         <h3 class ="light">Venda</h3>
         <table class ="striped">
-        <table>
+        
             <thread>
                 <tr>
                     <th>idVenda</th>
