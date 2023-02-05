@@ -85,8 +85,6 @@ include_once 'includes/message.php';
         </table>
         <br>
             <a href="adicionar.php" type="submit">NOVA EDITORA</a>
-            <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i></a>
-            </button>
             <br>
       </form>
     </div>
