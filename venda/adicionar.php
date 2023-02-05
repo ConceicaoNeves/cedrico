@@ -50,7 +50,7 @@ include 'includes/message.php';
 
             <div class="input-field col s12" >
             <select  id="preco" name="preco">
-            <option value="text" disabled selected>Preço</option>
+            <option value="text">Preço</option>
             <?php
 				$sql="SELECT preco,idLivro,titulo
 				from livro";
