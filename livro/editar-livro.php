@@ -24,13 +24,13 @@ endif;
 </head>
     <body>
     <header>
-      <a href="../livro/">Voltar</a>
+      <a href="../livro/index.php">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
     </header>
     <div class="card-cadastro">
-      <form class="card" action="../livro/php.action/update-livro.php" method="POST">
+      <form class="card" action="php.action/update-livro.php" method="POST">
         <h1>EDITAR LIVROS</h1>
         <div class="input-text">
         <input type= "hidden" name= "idLivro" value="<?php echo $dados['idLivro'];?>">
