@@ -72,7 +72,6 @@ include_once '../livro/php.action/connect-bd.php'
         <input type="submit" name="btn-cadastrar" value="CADASTRAR"/>
         <a href="index.php" type="submit">LISTAR</a>
       </form>
-      </form>
     </div>
   </body>
 </html>

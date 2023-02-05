@@ -15,7 +15,7 @@
       </ul>
     </header>
     <section>
-      <a href="cadastro.html">
+      <a href="../livro/index.php">
         <img src="assets/icons/UserGear.png" alt="" />
         <p>Livraria</p>
       </a>
