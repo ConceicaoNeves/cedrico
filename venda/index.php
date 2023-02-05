@@ -35,7 +35,7 @@ include_once 'includes/message.php';
                     <tr>
                         <td><?php echo $dados["idVenda"]; ?></td>
                         <td><?php echo $dados["idLivro"]; ?></td>
-                        <td><?php echo $dados["valorUnitario"]; ?></td>
+                        <td><?php echo $dados["preco"]; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
                         <td><?php echo $dados["cpfComprador"]; ?></td>
                     </tr>
