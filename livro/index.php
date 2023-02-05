@@ -96,10 +96,9 @@ include_once 'includes/message.php';
             <br>
             <a href="adicionar.php" type="submit">NOVO LIVRO</a>
             <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i>Ordenar por Preço</a>
-            </button>
             <br>  
-        </div>
-    </div>
-                </form>
-</div> 
+        </form>
+    </div> 
+    </body>
+</html>
     

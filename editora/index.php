@@ -21,7 +21,7 @@ include_once 'includes/message.php';
       </ul>
     </header>
     <div class="card-cadastro">
-      <form class="card-list">
+      <form class="card-list" method="POST">
         <h4 class ="light">Editora</h4>
         <table class ="striped">
         <table>
@@ -83,11 +83,11 @@ include_once 'includes/message.php';
                 ?>
             </tbody>
         </table>
-        <br>
-            <a href="adicionar.php" type="submit">NOVA EDITORA</a>
-            <br>
+        <a href="adicionar.php" type="submit">NOVA EDITORA</a>
       </form>
     </div>
+  </body>
+</html>
 
 
 
