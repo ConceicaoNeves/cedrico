@@ -1,7 +1,7 @@
 <?php
 //Header
-include_once 'includes/header.php';
-include_once '../produto/php.action/connect-bd.php';
+include_once '../venda/includes/header2.php';
+include_once '../venda/php_action/connect.php';
 ?> 
 <body style="background-color: #8b7293">
 <body background="../atestes.png"> 
@@ -23,7 +23,7 @@ include_once '../produto/php.action/connect-bd.php';
         <table class="striped">
             <tr>
                 <th>idVenda</th>
-                <th>idProduto</th>
+                <th>idLivro</th>
                 <th>Valor Venda</th>
                 <th>Data</td>
             </tr>
@@ -39,7 +39,7 @@ include_once '../produto/php.action/connect-bd.php';
                 } else {
                 $dataInicio = mysqli_escape_string($connect, $_GET['dataInicio']);
                 $dataFinal = mysqli_escape_string($connect, $_GET['dataFinal']);
-                $sql = "SELECT idVenda, idProduto, valorUnitario, dataVenda FROM venda WHERE dataVenda >= '$dataInicio' and dataVenda <= '$dataFinal' ORDER BY dataVenda;";
+                $sql = "SELECT idVenda, idLivro, preco, dataVenda FROM venda WHERE dataVenda >= '$dataInicio' and dataVenda <= '$dataFinal' ORDER BY dataVenda;";
                 $resultado = mysqli_query($connect, $sql);
 
                 if(mysqli_num_rows($resultado) > 0):
@@ -48,8 +48,8 @@ include_once '../produto/php.action/connect-bd.php';
                     ?>
                         <tr>
                             <td><?php echo $dados['idVenda']; ?></td>
-                            <td><?php echo $dados['idProduto']; ?></td>
-                            <td><?php echo $dados['valorUnitario']; ?></td>
+                            <td><?php echo $dados['idLivro']; ?></td>
+                            <td><?php echo $dados['preco']; ?></td>
                             <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
                             <?php endwhile;
                     else: ?>

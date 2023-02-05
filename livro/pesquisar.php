@@ -1,7 +1,7 @@
 <?php
-include '../produto/php.action/connect-bd.php';
+include '../livro/php.action/connect-bd.php';
 //Header
-include_once '../produto/includes/header.php';
+include_once '../livro/includes/header.php';
 ?> 
 <body style="background-color: #8b7293">
 <body background="../atestes.png"> 
@@ -19,7 +19,7 @@ include_once '../produto/includes/header.php';
     <table width="600px" border="1">
         <tr>
             <th>Nome</th>
-            <th>Marca</th>
+            <th>idAutor</th>
             <th>Preço</th>
         </tr>
         <?php
@@ -32,9 +32,8 @@ include_once '../produto/includes/header.php';
         } else {
             $pesquisa = mysqli_escape_string($connect, $_GET['pesquisar']);
             $sql_code = "SELECT * 
-                FROM produto
-                WHERE marca LIKE '%$pesquisa%' 
-                OR nomeProduto LIKE '%$pesquisa%'";
+                FROM livro
+                WHERE titulo LIKE '%$pesquisa%'";
             $sql_query = mysqli_query($connect, $sql_code); 
             
             if (mysqli_num_rows($sql_query) == 0){
@@ -47,10 +46,10 @@ include_once '../produto/includes/header.php';
                 while($dados = mysqli_fetch_assoc($sql_query)) {
                     ?>
                     <tr>
-                        <td><?php echo $dados['nomeProduto']; ?></td>
-                        <td><?php echo $dados['marca']; ?></td>
-                        <td><?php echo $dados['valorVenda']; ?></td>
-                        <td><a href="editar-produto.php?idProduto=<?php echo $dados['idProduto']; ?>" class="btn-floating light-green"><i class="material-icons">edit</i></a></td>
+                        <td><?php echo $dados['titulo']; ?></td>
+                        <td><?php echo $dados['idAutor']; ?></td>
+                        <td><?php echo $dados['preco']; ?></td>
+                        <td><a href="editar-livro.php?idLivro=<?php echo $dados['idLivro']; ?>" class="btn-floating light-green"><i class="material-icons">edit</i></a></td>
                     </tr>
                     <?php
                 }
@@ -69,5 +68,5 @@ include_once '../produto/includes/header.php';
 </div>
 <?php
 //Footer
-include_once '../produto/includes/footer.php';
+include_once '../livro/includes/footer.php';
 

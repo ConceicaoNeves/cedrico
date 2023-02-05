@@ -23,7 +23,7 @@
         <img src="assets/icons/UserGear.png" alt="" />
         <p>Vendas</p>
       </a>
-      <a href="relatorio.html">
+      <a href="/venda/relatorio2.php">
         <img src="assets/icons/UserGear.png" alt="" />
         <p>Relatório</p>
       </a>
