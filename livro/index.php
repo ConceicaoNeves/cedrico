@@ -16,7 +16,7 @@ include_once 'includes/message.php';
 </head>
     <body>
     <header>
-      <a href="../livro/">Voltar</a>
+      <a href="../cadastro.html">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
@@ -91,20 +91,15 @@ include_once 'includes/message.php';
                     <?php
                     endif;
                     ?>
-
                 </tbody>  
             </table>
             <br>
-            <a href="adicionar.php" class="btn deep-purple lighten-2"><i class ="material-icons left">add_circle</i>Novo Livro</a>
+            <a href="adicionar.php" type="submit">NOVO LIVRO</a>
             <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i>Ordenar por Preço</a>
             </button>
             <br>  
         </div>
     </div>
+                </form>
 </div> 
-        
-
-<?php
-//footer
-include_once 'includes/footer.php';
-?>
+    
