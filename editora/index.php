@@ -3,13 +3,25 @@ include_once 'php_action/bdconnect.php';
 include_once 'includes/header.php';
 include_once 'includes/message.php';
 ?> 
-<body style="background-color: #8b7293">
-<body background="../atestes.png"> 
-<br><br><br>
-<div class="container">
-    <div class ="col s12 m6 push-m3">
-        <div class="card-panel purple lighten-5">
-        <a href="../home.php" class=""><i class="material-icons">arrow_back_ios</i></a>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="../assets/css/cad-padrao.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Editora</title>
+  </head>
+  <body>
+    <header>
+      <a href="../cadastro.html">Voltar</a>
+      <ul>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </header>
+    <div class="card-cadastro">
+      <form class="card-list">
         <h4 class ="light">Editora</h4>
         <table class ="striped">
         <table>
@@ -72,19 +84,12 @@ include_once 'includes/message.php';
             </tbody>
         </table>
         <br>
-        <a href="adicionar.php" class="btn deep-purple lighten-2"><i class ="material-icons left">person_add</i>Adicionar Editora </a>
-        <a href="organizar-fornecedores.php" class="btn deep-purple lighten-2"><i class="material-icons left">workspace_premium</i>Verificar Editoras</a>
-        <br>
-                <button class="btn-floating btn-small waves-effect waves-light red darken-1" 
-                style="width: 50px; height: 50px; right: -95%; buttom: 0%"
-                title="Sair" aria-pressed="false"> 
-                <a href="../logout.php" class ="" ><i class="material-icons">exit_to_app</i></a>
-                </button>
-                <br> 
-        </div>
+            <a href="adicionar.php" type="submit">NOVA EDITORA</a>
+            <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i></a>
+            </button>
+            <br>
+      </form>
     </div>
-</div>
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>
+
+
+
