@@ -5,16 +5,28 @@ include_once 'includes/header.php';
 include_once 'includes/message.php';
 
 ?>
-
-<body style="background-color: #8b7293">
-<body background="../atestes.png"> 
-<br><br><br>        
-<div class="container">
-    <div class="col s12 m6 push-m3">
-        <div class="card-panel purple lighten-5">
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="../assets/css/cad-padrao.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Livro</title>
+</head>
+    <body>
+    <header>
+      <a href="../livro/">Voltar</a>
+      <ul>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </header>
+    <div class="card-cadastro">
+        <form class="card-list">
             <a href="../home.php" class=""><i class="material-icons">arrow_back_ios</i></a>
             <h3 class="light">Livros</h3>
             <table class="striped">
+                <br>
                 <thead>
                     <tr>
                         <th>Título</th>
@@ -85,14 +97,8 @@ include_once 'includes/message.php';
             <br>
             <a href="adicionar.php" class="btn deep-purple lighten-2"><i class ="material-icons left">add_circle</i>Novo Livro</a>
             <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i>Ordenar por Preço</a>
-            <button class="btn-floating btn-small waves-effect waves-light red darken-1" 
-            style="width: 50px; height: 50px; right: -50%; buttom: 0%"
-            title="Sair" aria-pressed="false"> 
-            <a href="../logout.php" class ="" ><i class="material-icons">exit_to_app</i></a>
             </button>
-            <br> 
-            
-            
+            <br>  
         </div>
     </div>
 </div> 
