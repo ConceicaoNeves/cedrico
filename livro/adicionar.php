@@ -42,7 +42,7 @@ include_once '../livro/php.action/connect-bd.php'
           <input type="text" name="genero" id="genero">
         </div>
         <div class="input-text">
-        <select id="idAutor" name="idAutor">
+        <select class="select" id="idAutor" name="idAutor">
         <option value="text" disabled selected>Escolha o Autor</option>
         <?php
             $sql="SELECT idAutor,idAutor, nomeAutor, nacionalidade
@@ -56,7 +56,7 @@ include_once '../livro/php.action/connect-bd.php'
             </select>
         </div>
         <div class="input-text">
-        <select  class="custom-select" id="idEditora" name="idEditora">
+        <select class="select" id="idEditora" name="idEditora">
              <option value="text" disabled selected>Escolha a Editora</option>
                 <?php
                 $sql="SELECT idEditora,idEditora, nomeEditora,cidade
