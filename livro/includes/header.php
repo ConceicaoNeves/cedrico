@@ -5,7 +5,6 @@
     <head>
         <meta charset="utf-8">
         <title>Produto</title>
-        <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       
         <!-- Compiled and minified CSS -->
