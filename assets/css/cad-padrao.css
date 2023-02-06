@@ -121,8 +121,8 @@ header a {
 .card a[type="submit"] {
     text-decoration: none;
     box-sizing: border-box;
-    width: 100%;
-    height: 65px;
+    width: 40%;
+    height: 40px;
     background: #524038;
     border: 3px solid #1a120b;
     border-radius: 10px;
