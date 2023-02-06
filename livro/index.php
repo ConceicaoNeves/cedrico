@@ -23,7 +23,6 @@ include_once 'includes/message.php';
     </header>
     <div class="card-cadastro">
         <form class="card-list">
-            <a href="../home.php" class=""><i class="material-icons">arrow_back_ios</i></a>
             <h3 class="light">Livros</h3>
             <table class="striped">
                 <br>

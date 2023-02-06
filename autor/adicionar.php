@@ -13,7 +13,7 @@ include_once 'includes/message.php';
   </head>
   <body>
     <header>
-      <a href="cadastro.html">Voltar</a>
+      <a href="../autor/index.php">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
@@ -42,7 +42,6 @@ include_once 'includes/message.php';
           <input class="validate" type="text" name="nacionalidade" id="nacionalidade">
         </div>
         <input name="btn-cadastrar" type="submit" value="CADASTRAR" />
-        <a href="index.php" type="submit">LISTAR</a>
       </form>
     </div>
   </body>

@@ -13,7 +13,7 @@ include_once '../livro/php.action/connect-bd.php'
 </head>
     <body>
     <header>
-      <a href="../livro/">Voltar</a>
+      <a href="../livro/index.php">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
@@ -70,7 +70,6 @@ include_once '../livro/php.action/connect-bd.php'
         </select>
         </div>
         <input type="submit" name="btn-cadastrar" value="CADASTRAR"/>
-        <a href="index.php" type="submit">LISTAR</a>
       </form>
     </div>
   </body>
