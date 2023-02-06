@@ -15,7 +15,6 @@ include_once '../venda/php_action/connect.php';
         <form action="">
         <p> Data Inicial: </p>
         <input type="date" name="dataInicio" value="<?php if(isset($_GET['dataInicio'])) echo $_GET['dataInicio']; ?>">
-        
         <br><br> <p>Data Final:</p>
         <input type="date" name="dataFinal" value="<?php if(isset($_GET['dataFinal'])) echo $_GET['dataFinal']; ?>">
         <button type="submit" class="btn deep-purple lighten-2">Pesquisar</button>

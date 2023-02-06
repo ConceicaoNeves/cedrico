@@ -1,7 +1,6 @@
 <?php
 //Header
 include_once 'php_action/bdconnect.php';
-include_once 'includes/header.php';
 if (isset($_GET['idEditora'])):
     $idEditora = mysqli_escape_string($connect, $_GET['idEditora']);
     $sql = "SELECT * FROM editora WHERE idEditora ='$idEditora'";
