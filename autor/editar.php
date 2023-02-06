@@ -1,17 +1,13 @@
 <?php
 //Header
 include_once 'php_action/bdconnect.php';
+include_once 'includes/header.php';
 if (isset($_GET['idAutor'])):
     $idAutor = mysqli_escape_string($connect, $_GET['idAutor']);
     $sql = "SELECT * FROM autor WHERE idAutor ='$idAutor'";
     $resultado = mysqli_query($connect, $sql);
     $dados = mysqli_fetch_array($resultado);
 endif;
-?> 
-
-<?php
-//Header
-include_once 'includes/message.php';
 ?> 
 <body style="background-color: #8b7293">
 <body background="../atestes.png"> 
