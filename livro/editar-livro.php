@@ -10,6 +10,16 @@ if(isset($_GET['idLivro'])):
     $resultado = mysqli_query($connect, $sql);
     $dados = mysqli_fetch_array($resultado);
 
+    $nomeEdit  = $dados['idEditora'];
+    $sql1 = "SELECT  nomeEditora FROM editora WHERE idEditora = '$nomeEdit'";
+    $resultado = mysqli_query($connect, $sql1);
+    $dados1 = mysqli_fetch_array($resultado);
+
+    $nomeAut  = $dados['idAutor'];
+    $sql2 = "SELECT  nomeAutor FROM autor WHERE idAutor = '$nomeAut'";
+    $resultado = mysqli_query($connect, $sql2);
+    $dados2 = mysqli_fetch_array($resultado);
+
 endif;
 
 ?>
@@ -20,7 +30,7 @@ endif;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
-    <title>Cadastrar Livro</title>
+    <title>Editar Livro</title>
 </head>
     <body>
     <header>
@@ -54,8 +64,8 @@ endif;
           <input type="text" name="genero" id="genero" value="<?php echo $dados['genero'];?>">
         </div>
         <div class="input-text">
-        <select  id="idAutor" name="idAutor" value="<?php echo $dados['idAutor'];?>">
-                <option value="text" disabled selected>Escolha o Autor</option>
+        <select  name="idAutor"  id="idAutor">
+                <option value="<?php echo $dados['idAutor'];?>">Autor: <?php echo $dados2['nomeAutor'];?></option>
                 <?php
                     $sql="SELECT idAutor,idAutor, nomeAutor, nacionalidade
                     from autor";
@@ -68,18 +78,19 @@ endif;
                     <?php endwhile; ?>
         </select>
         </div>
+
         <div class="input-text">
-        <select  id="idEditora" name="idEditora" value="<?php echo $dados['idEditora'];?>">
-                <option value="text">Escolha a Editora</option>
+        <select  name="idEditora" id="idEditora">
+                <option value="<?php echo $dados['idEditora'];?>">Editora: <?php echo $dados1['nomeEditora'];?></option>
                 <?php
-                    $sql="SELECT idEditora,idEditora, nomeEditora,cidade
+                    $sql="SELECT idEditora, nomeEditora,cidade
                     from editora";
 
                     $result=mysqli_query($connect,$sql);
 
                     while ($editora=mysqli_fetch_row($result)):
                         ?>
-                        <option value="<?php echo $editora[0] ?>"><?php echo $editora[1]." - ".$editora[2]." - ".$editora[3] ?></option>
+                        <option value="<?php echo $editora[0] ?>"><?php echo $editora[1]." - ".$editora[2]?></option>
                     <?php endwhile; ?>
         </select>
         </div>
