@@ -159,7 +159,7 @@ select {
     font-family: "Poppins";
     background-color: #d5cea3;
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: start;
     padding: 20px;
