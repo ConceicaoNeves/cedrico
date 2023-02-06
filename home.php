@@ -16,7 +16,7 @@
     </header>
     <section>
       <a href="cadastro.html">
-        <img src="assets/icons/UserGear.png" alt="" />
+        <img src="assets/icons/livraria.png" alt="" />
         <p>Livraria</p>
       </a>
       <a href="vendas.html">
