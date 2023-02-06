@@ -23,7 +23,6 @@ include_once 'includes/message.php';
     </header>
     <div class="card-cadastro">
         <form class="card-list">
-            <a href="../home.php" class=""><i class="material-icons">arrow_back_ios</i></a>
             <h3 class="light">Livros</h3>
             <table class="striped">
                 <br>
@@ -95,11 +94,9 @@ include_once 'includes/message.php';
             </table>
             <br>
             <a href="adicionar.php" type="submit">NOVO LIVRO</a>
-            <a href="preco.php" class="btn deep-purple lighten-2"><i class ="material-icons left">paid</i>Ordenar por Preço</a>
-            </button>
-            <br>  
-        </div>
-    </div>
-                </form>
-</div> 
+            <br> 
+        </form>
+    </div> 
+    </body>
+</html>
     

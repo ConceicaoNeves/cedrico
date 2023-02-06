@@ -72,18 +72,19 @@ header a {
     flex-direction: column;
 }
 
-.card-list{
-  width: 80%;
-  height: 75%;
-  background-color: #e5e5cb;
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.card-list {
+    width: 80%;
+    height: 75%;
+    background-color: #e5e5cb;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 .input-text {
     width: 100%;
     display: flex;
@@ -120,6 +121,22 @@ header a {
 .card a[type="submit"] {
     text-decoration: none;
     box-sizing: border-box;
+    width: 40%;
+    height: 40px;
+    background: #524038;
+    border: 3px solid #1a120b;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.card-cadastro a[type="submit"] {
+    text-decoration: none;
+    box-sizing: border-box;
     width: 100%;
     height: 65px;
     background: #524038;
@@ -150,7 +167,7 @@ select {
     font-weight: bold;
     margin-top: 10px;
     box-sizing: border-box;
-    height: 60px;
+    height: 70px;
     border: 3px solid #1a120b;
     border-radius: 10px;
 }
