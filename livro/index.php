@@ -40,7 +40,7 @@ include_once 'includes/message.php';
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM livro";
+                    $sql = "SELECT *, e.nomeEditora, a.nomeAutor FROM livro INNER JOIN editora as e on livro.idEditora=e.idEditora INNER JOIN autor as a on livro.idAutor=a.idAutor ";
                     $resultado = mysqli_query($connect, $sql);
 
                     if(mysqli_num_rows($resultado) > 0):
@@ -51,8 +51,8 @@ include_once 'includes/message.php';
                                 <td><?php echo $dados['preco']; ?></td>
                                 <td><?php echo $dados['anoPublicacao']; ?></td>
                                 <td><?php echo $dados['edicao']; ?></td>
-                                <td><?php echo $dados['idEditora']; ?></td>
-                                <td><?php echo $dados['idAutor']; ?></td>
+                                <td><?php echo $dados['nomeEditora']; ?></td>
+                                <td><?php echo $dados['nomeAutor']; ?></td>
                                 <td><?php echo $dados['genero']; ?></td>
                                 <td><a href="editar-livro.php?idLivro=<?php echo $dados['idLivro']; ?>" class="btn-floating  light-green"><i class="material-icons">edit</i></a></td>
                                 <td><a href="#modal<?php echo $dados['idLivro']; ?>" class ="btn-floating red lighten-1 modal-trigger"><i class ="material-icons">delete</i></a></td>
