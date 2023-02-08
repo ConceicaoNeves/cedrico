@@ -45,11 +45,12 @@ include_once 'includes/message.php';
 
                     if(mysqli_num_rows($resultado) > 0):
                         while($dados = mysqli_fetch_array($resultado)):
+                            $dados['anoPublicacao'] = strtotime($dados['anoPublicacao'])
                         ?>
                             <tr>
                                 <td><?php echo $dados['titulo']; ?></td>
                                 <td><?php echo $dados['preco']; ?></td>
-                                <td><?php echo $dados['anoPublicacao']; ?></td>
+                                <td><?php echo date('Y', $dados['anoPublicacao']); ?></td>
                                 <td><?php echo $dados['edicao']; ?></td>
                                 <td><?php echo $dados['nomeEditora']; ?></td>
                                 <td><?php echo $dados['nomeAutor']; ?></td>

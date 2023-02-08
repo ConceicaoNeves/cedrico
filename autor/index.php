@@ -40,13 +40,16 @@ include_once 'includes/message.php';
                 $resultado = mysqli_query($connect, $sql);
                 if(mysqli_num_rows($resultado)>0):
                     while($dados = mysqli_fetch_array($resultado)):
+                        $dados['dataNascimento'] = strtotime($dados['dataNascimento']);
+                        $dados['dataMorte'] = strtotime($dados['dataMorte'])
                     ?>
+                    
                     <tr>
                         <td><?php echo $dados['idAutor']; ?></td>
                         <td><?php echo $dados['nomeAutor']; ?></td>
                         <td><?php echo $dados['sobrenomeAutor']; ?></td>
-                        <td><?php echo $dados['dataNascimento']; ?></td>
-                        <td><?php echo $dados['dataMorte']; ?></td>
+                        <td><?php echo date('d/m/Y', $dados['dataNascimento']);?></td>
+                        <td><?php echo date('d/m/Y', $dados['dataMorte']);?></td>
                         <td><?php echo $dados['nacionalidade']; ?></td>
                         <td><a href="editar.php?idAutor=<?php echo $dados['idAutor']; ?>" class ="btn-floating light-green"><i class ="material-icons">edit</i></a></td>
                         
