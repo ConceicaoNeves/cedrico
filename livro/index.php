@@ -99,4 +99,8 @@ include_once 'includes/message.php';
     </div> 
     </body>
 </html>
+<?php
+//Footer
+include_once 'includes/footer.php';
+?>
     

@@ -51,22 +51,24 @@ include_once 'includes/message.php';
                         <td><a href="editar.php?idEditora=<?php echo $dados['idEditora']; ?>" class ="btn-floating light-green"><i class ="material-icons">edit</i></a></td>
                         
                         <td><a href="#modal<?php echo $dados['idEditora']; ?>" class ="btn-floating red lighten-1 modal-trigger"><i class ="material-icons">delete</i></a></td>
-                    
+                      
                         <!-- Modal Structure -->
                         <div id="modal<?php echo $dados['idEditora']; ?>" class="modal">
                             <div class="modal-content">
                             <h4>Opa!</h4>
-                            <p>Tem certeza que deseja excluir essa editora?</p>
+                            <p>Tem certeza que deseja excluir esse editora?</p>
                             </div>
                             <div class="modal-footer">
                             
-                            <form action="php_action/delete.php" method="POST">
-                                <input type="hidden" name="idEditora" value="<?php echo $dados['idEditora']; ?>">
-                                <button type="submit" name="btn-deletar" class="btn green lighten-1">Sim, tenho certeza!</button>
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                            </form>
+                              <form action="../editora/php_action/delete.php" method="POST">
+                                  <input type="hidden" name="idEditora" value="<?php echo $dados['idEditora']; ?>">
+                                  <button type="submit" name="btn-deletar" class="btn green lighten-1">Sim, tenho certeza!</button>
+                                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                              </form>
+                            </div>
                         </div>
-                        </div>
+      
+                    
                     </tr>
                     <?php 
                     endwhile;
@@ -89,5 +91,7 @@ include_once 'includes/message.php';
   </body>
 </html>
 
-
-
+<?php
+//Footer
+include_once 'includes/footer.php';
+?>
