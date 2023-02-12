@@ -94,7 +94,6 @@ endif;
         </select>
         </div>
         <input type="submit" name="btn-editar" value="EDITAR"/>
-        <a href="index.php" type="submit">LISTAR</a>
       </form>
     </div>
   </body>

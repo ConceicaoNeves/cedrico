@@ -14,25 +14,12 @@ include 'includes/message.php';
   </head>
   <body>
     <header>
-      <a href="#modal">Voltar</a>
+      <a href="../venda/vendas">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
     </header>
     <div class="card-cadastro">
-    <div id="modal" class="modal">
-                    <div class="modal-content">
-                    <h5>Tem certeza que não deseja finalizar essa venda?</h5>
-                    <p>A operação não poderá ser desfeita.</p>
-                    </div>
-                    <div class="modal-footer">
-                                
-                    <form action="../venda/vendas.html" method="POST">
-                        <button type="submit" name="btn" class="btn green lighten-1">Sim, tenho certeza!</button>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                        </form>
-                    </div>
-        </div>
       <form class="card" action="../venda/php_action/creat.php" method="POST">
         <h1>CADASTRAR VENDA</h1>
         <div class="input-text">
