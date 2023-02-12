@@ -1,24 +1,35 @@
 <?php
 //Header
-include_once '../venda/includes/header2.php';
 include_once '../venda/php_action/connect.php';
 ?> 
-<body style="background-color: #8b7293">
-<body background="../atestes.png"> 
-<br><br><br>
-<div class="container">
-    <div class ="col s12 m6 push-m3">
-    <div class="card-panel purple lighten-5">
-    <a href="index.php" class=""><i class="material-icons">arrow_back_ios</i></a>
-    <img class="materialboxed" src="../phpoo.png" style="right: 195px; top: 85px; position: absolute" width="160" height="140" >
-        <h3 class ="light">Relatório por Período</h3>
-        <form action="">
-        <p> Data Inicial: </p>
-        <input type="date" name="dataInicio" value="<?php if(isset($_GET['dataInicio'])) echo $_GET['dataInicio']; ?>">
-        <br><br> <p>Data Final:</p>
-        <input type="date" name="dataFinal" value="<?php if(isset($_GET['dataFinal'])) echo $_GET['dataFinal']; ?>">
-        <button type="submit" class="btn deep-purple lighten-2">Pesquisar</button>
-    </form>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="../assets/css/cad-padrao.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Relatório</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">Voltar</a>
+      <ul>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </header>
+    <div class="card-cadastro">
+      <form class="card">
+        <h1>RELATÓRIO</h1>
+        <div class="input-text">
+          <label for="data-inicio">Data Inicio:</label>
+          <input type="date" name="dataInicio" value="<?php if(isset($_GET['dataInicio'])) echo $_GET['dataInicio']; ?>">
+        </div>
+        <div class="input-text">
+          <label for="data-final">Data final:</label>
+          <input type="date" name="dataFinal" value="<?php if(isset($_GET['dataFinal'])) echo $_GET['dataFinal']; ?>">
+        </div>
+        <input type="submit" value="EMITIR RELATÓRIO" />
         <table class="striped">
             <tr>
                 <th>idVenda</th>
@@ -61,23 +72,15 @@ include_once '../venda/php_action/connect.php';
                 ?>
             </tbody> 
         </table>
-
         <td> 
             <input type="button" value="IMPRIMIR" onClick="window.print()" class=" waves-effect waves-light green"/>
-        </td>
-
-        <button class="btn-floating btn-small waves-effect waves-light red" 
-            style="width: 50px; height: 50px; right: -85%; buttom: 0%"
-            title="Sair" aria-pressed="false"> 
-            <a href="../logout.php" class ="" ><i class="material-icons">exit_to_app</i></a>
-            </button>
-            <br>   
+        </td>  
         </div>
         </div>
-</div>  
-<br>
-            
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>          
+    </div>  
+    <br>
+      </form>
+    </div>
+  </body>
+</html>
+        
