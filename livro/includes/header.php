@@ -4,7 +4,7 @@
   <html>
     <head>
         <meta charset="utf-8">
-        <title>Produto</title>
+        <title>Livro</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       
         <!-- Compiled and minified CSS -->

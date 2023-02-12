@@ -57,8 +57,8 @@ include_once 'includes/message.php';
                         <!-- Modal Structure -->
                         <div id="modal<?php echo $dados['idAutor']; ?>" class="modal">
                             <div class="modal-content">
-                            <h4>Opa!</h4>
-                            <p>Tem certeza que deseja excluir esse autor?</p>
+                            <h4>Tem certeza que deseja excluir esse autor?</h4>
+                            <p>A operação não poderá ser desfeita.</p>
                             </div>
                             <div class="modal-footer">
                             
@@ -91,3 +91,7 @@ include_once 'includes/message.php';
     </div>
     </body>
 </html>
+<?php
+//Footer
+include_once 'includes/footer.php';
+?>

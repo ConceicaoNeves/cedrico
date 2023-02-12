@@ -23,8 +23,8 @@ include_once 'includes/message.php';
     </header>
     <div class="card-cadastro">
         <form class="card-list">
-            <h3 class="light">Livros</h3>
-            <table class="striped">
+            <h4>Livros</h4>
+            <table>
                 <br>
                 <thead>
                     <tr>
@@ -35,7 +35,7 @@ include_once 'includes/message.php';
                         <th>Editora</th>
                         <th>Autor</th>
                         <th>Gênero</th>
-                        <th> <td><a href="pesquisar.php" class="btn-floating deep-purple lighten-2"><i class="material-icons">search</i></a></td> </th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -93,9 +93,7 @@ include_once 'includes/message.php';
                     ?>
                 </tbody>  
             </table>
-            <br>
             <a href="adicionar.php" type="submit">NOVO LIVRO</a>
-            <br> 
         </form>
     </div> 
     </body>

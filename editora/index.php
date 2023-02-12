@@ -21,7 +21,7 @@ include_once 'includes/message.php';
       </ul>
     </header>
     <div class="card-cadastro">
-      <form class="card-list" method="POST">
+      <form class="card-list">
         <h4>Editora</h4>
         <table>
             <thread>
@@ -54,8 +54,8 @@ include_once 'includes/message.php';
                         <!-- Modal Structure -->
                         <div id="modal<?php echo $dados['idEditora']; ?>" class="modal">
                             <div class="modal-content">
-                            <h4>Opa!</h4>
-                            <p>Tem certeza que deseja excluir esse editora?</p>
+                            <h4>Tem certeza que deseja excluir esse editora?</h4>
+                            <p>A operação não poderá ser desfeita.</p>
                             </div>
                             <div class="modal-footer">
                             
@@ -69,8 +69,7 @@ include_once 'includes/message.php';
       
                     
                     </tr>
-                    <?php 
-                    endwhile;
+                    <?php endwhile;
                 else: ?>
                 <tr>
                     <td></td>
@@ -89,3 +88,7 @@ include_once 'includes/message.php';
     </div>
   </body>
 </html>
+<?php
+//Footer
+include_once 'includes/footer.php';
+?>
