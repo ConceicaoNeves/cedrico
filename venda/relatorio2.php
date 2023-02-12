@@ -1,5 +1,6 @@
 <?php
 //Header
+include_once 'includes/header.php';
 include_once '../venda/php_action/connect.php';
 ?> 
 <!DOCTYPE html>
@@ -30,6 +31,7 @@ include_once '../venda/php_action/connect.php';
           <input type="date" name="dataFinal" value="<?php if(isset($_GET['dataFinal'])) echo $_GET['dataFinal']; ?>">
         </div>
         <input type="submit" value="EMITIR RELATÓRIO" />
+        <form class="card-list">
         <table class="striped">
             <tr>
                 <th>idVenda</th>
@@ -73,7 +75,7 @@ include_once '../venda/php_action/connect.php';
             </tbody> 
         </table>
         <td> 
-            <input type="button" value="IMPRIMIR" onClick="window.print()" class=" waves-effect waves-light green"/>
+        <input type="submit" value="IMPRIMIR"/>
         </td>  
         </div>
         </div>
