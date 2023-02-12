@@ -1,6 +1,7 @@
 <?php
 //Header
-include_once '../livro/php.action/connect-bd.php'
+include_once '../livro/php.action/connect-bd.php';
+include_once 'includes/message.php';
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -74,3 +75,7 @@ include_once '../livro/php.action/connect-bd.php'
     </div>
   </body>
 </html>
+<?php
+//Footer
+include_once 'includes/footer.php';
+?>
