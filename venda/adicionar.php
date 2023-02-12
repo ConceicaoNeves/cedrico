@@ -1,36 +1,43 @@
 <?php
 //Header
-include_once '../venda/includes/header2.php';
 include "../venda/php_action/connect.php";
 include 'includes/message.php';
-
-?> 
-<body style="background-color: #8b7293">
-<body background="../atestes.png"> 
-<br><br><br>
-<div class="container">
-    <div class ="col s12 m6 push-m3">
-    <div class="card-panel purple lighten-5">
-    <a href="#modal" class ="modal-trigger"><i class ="material-icons">arrow_back_ios</i></a>        
-            <!-- Modal Structure -->
-                <div id="modal" class="modal">
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="../assets/css/cad-padrao.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastrar Venda</title>
+  </head>
+  <body>
+    <header>
+      <a href="#modal">Voltar</a>
+      <ul>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </header>
+    <div class="card-cadastro">
+    <div id="modal" class="modal">
                     <div class="modal-content">
                     <h5>Tem certeza que não deseja finalizar essa venda?</h5>
                     <p>A operação não poderá ser desfeita.</p>
                     </div>
                     <div class="modal-footer">
                                 
-                    <form action="../venda/index.php" method="POST">
+                    <form action="../venda/vendas.html" method="POST">
                         <button type="submit" name="btn" class="btn green lighten-1">Sim, tenho certeza!</button>
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
                         </form>
                     </div>
-                </div>
-        <h3 class ="light">Nova Venda</h3>	
-        <form action="../venda/php_action/creat.php" method="POST" >
-        
-        <div class="input-field col s12" >
-            <select  id="idLivro" name="idLivro">
+        </div>
+      <form class="card" action="../venda/php_action/creat.php" method="POST">
+        <h1>CADASTRAR VENDA</h1>
+        <div class="input-text">
+          <label for="idLivro">Livro:</label>
+          <select  id="idLivro" name="idLivro">
             <option value="text" disabled selected>Escolha o Livro</option>
             <?php
 				$sql="SELECT idLivro, idLivro, titulo, preco
@@ -45,11 +52,10 @@ include 'includes/message.php';
                     ?>
                 
             </select>
-            <label>Livro</label>
-            </div>
-
-            <div class="input-field col s12" >
-            <select  id="preco" name="preco">
+        </div>
+        <div class="input-text">
+          <label for="preco">Preço:</label>
+          <select  id="preco" name="preco">
             <option value="text">Preço</option>
             <?php
 				$sql="SELECT preco,idLivro,titulo
@@ -63,36 +69,16 @@ include 'includes/message.php';
                     <?php  endwhile; ?>
                 
             </select>
-            <label>Preço</label>
-            </div>
-        
-
-            <div class="input-field col s12">
-                <i class="material-icons prefix">calendar_month</i>
-                <input id="icon_prefix" class="validate" type="date" name="dataVenda" id="dataVenda">
-                <label for="dataVenda">Data</label>
-            </div>
-            <div class="input-field col s12">
-                    <input type="text" name="cpfComprador" id="cpfComprador">
-                    <label for="cpfComprador">Cpf Comprador</label>
-                </div>
-            <button type="submit" name="btn-registrarnovavenda" class="btn deep-purple lighten-2"><i class="material-icons left">shopping_cart_checkout</i>Registrar Nova Venda</button>
-            <a href="../venda/index.php" type="submit" class="btn"><i class="material-icons left">receipt_long</i>Lista de Vendas</a>
-
-            <br>
-                <button class="btn-floating btn-small waves-effect waves-light red" 
-                style="width: 50px; height: 50px; right: -95%; buttom: 0%"
-                title="Sair" aria-pressed="false"> 
-                <a href="../logout.php" class ="" ><i class="material-icons">exit_to_app</i></a>
-                </button>
-                <br> 
-        </form>
+        <div class="input-text">
+          <label for="dataVenda">Data:</label>
+          <input class="validate" type="date" name="dataVenda" id="dataVenda">
+        </div>
+        <div class="input-text">
+          <label for="editora">Cpf Comprador:</label>
+          <input type="text" name="cpfComprador" id="cpfComprador">
+        </div>
+        <input type="submit" name="btn-registrarnovavenda" value="CADASTRAR" />
+      </form>
     </div>
-    </div>
-</div>
-
-<?php
-//Footer
-include_once '../venda/includes/footer.php';
-
-
+  </body>
+</html>

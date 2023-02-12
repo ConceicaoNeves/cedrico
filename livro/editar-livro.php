@@ -1,5 +1,4 @@
 <?php
-
 //conexao
 include_once '../livro/php.action/connect-bd.php';
 //Select

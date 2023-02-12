@@ -9,7 +9,20 @@
   </head>
   <body>
     <header>
-      <a href="home.html">Voltar</a>
+      <a id="modal" href="home.html">Voltar</a>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+        <h5>Tem certeza que não deseja finalizar essa venda?</h5>
+        <p>A operação não poderá ser desfeita.</p>
+        </div>
+        <div class="modal-footer">
+                    
+        <form action="../venda/index.php" method="POST">
+            <button type="submit" name="btn" class="btn green lighten-1">Sim, tenho certeza!</button>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            </form>
+        </div>
+    </div>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
