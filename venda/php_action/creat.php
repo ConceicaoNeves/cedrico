@@ -18,7 +18,7 @@ if(isset($_POST['btn-registrarnovavenda'])):
     $idLivro = clear($_POST['idLivro']);
     $preco = clear(floatval($_POST['preco']));
     $dataVenda = clear($_POST['dataVenda']);
-    $quantidade = clear($_POST['$quantidade']);
+    $quantidade = mysqli_escape_string($connect, $_POST['quantidade']);
     $total = $_POST['total'];
 
     if (!is_numeric($preco) || !is_numeric($quantidade)) {

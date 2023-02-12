@@ -61,9 +61,9 @@ include 'includes/message.php';
           <input class="validate" type="date" name="dataVenda" id="dataVenda">
         </div>
         <div class="input-text">
-        <label for="quantidade">Quantidade:</label>
-        <input type="text" name="quantidade" id="quantidade" onchange="calculateTotal()">
-         </div>
+          <label for="quantidade">Quantidade:</label>
+          <input type="text" name="quantidade" id="quantidade" onchange="calculateTotal()">
+        </div>
          <div class="input-text">
           <label for="total">Total:</label>
           <input type="text" name="total" id="total" readonly>
