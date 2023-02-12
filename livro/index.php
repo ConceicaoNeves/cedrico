@@ -16,7 +16,7 @@ include_once 'includes/message.php';
 </head>
     <body>
     <header>
-      <a href="../home.html">Voltar</a>
+      <a href="../cadastro.html">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
