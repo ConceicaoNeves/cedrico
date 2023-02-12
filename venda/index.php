@@ -30,8 +30,9 @@ include_once 'includes/message.php';
                     <th>idVenda</th>
                     <th>Livro</th>
                     <th>Valor Unitário</th>
-                    <th>Data</th> 
-                    <th>cpfComprador</th>    
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th>Data</th>  
                 </tr>
             </thread>
             <tbody>
@@ -47,13 +48,15 @@ include_once 'includes/message.php';
                         <td><?php echo $dados["idVenda"]; ?></td>
                         <td><?php echo $dados["idLivro"]; ?></td>
                         <td><?php echo $dados["preco"]; ?></td>
+                        <td><?php echo $dados["quantidade"]; ?></td>
+                        <td><?php echo $dados["total"]; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
-                        <td><?php echo $dados["cpfComprador"]; ?></td>
                     </tr>
                     <?php 
                     endwhile;
                 else: ?>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
