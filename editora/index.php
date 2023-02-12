@@ -22,8 +22,7 @@ include_once 'includes/message.php';
     </header>
     <div class="card-cadastro">
       <form class="card-list" method="POST">
-        <h4 class ="light">Editora</h4>
-        <table class ="striped">
+        <h4>Editora</h4>
         <table>
             <thread>
                 <tr>
@@ -90,8 +89,3 @@ include_once 'includes/message.php';
     </div>
   </body>
 </html>
-
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>

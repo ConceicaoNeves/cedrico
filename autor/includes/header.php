@@ -2,7 +2,7 @@
   <html>
     <head>
         <meta charset="utf-8">
-        <title>Fornecedor</title>
+        <title>Autor</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->

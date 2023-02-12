@@ -17,11 +17,11 @@ endif;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
-    <title>Cadastrar Editora</title>
+    <title>Editar Editora</title>
 </head>
     <body>
     <header>
-      <a href="../livro/">Voltar</a>
+      <a href="../editora">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
@@ -40,13 +40,13 @@ endif;
             </div>
             <div class="input-text">
                 <label for="cidade">Cidade</label>
-                <input id="icon_prefix" type="text" class="validate" type="text" name="cidade" id="cidade" value="<?php echo $dados['cidade'];?>">
+                <input class="validate" type="text" name="cidade" id="cidade" value="<?php echo $dados['cidade'];?>">
             </div>
             <div class="input-text">
                 <label for="email">Email</label>    
                 <input type="email" name="email" id="email" value="<?php echo $dados['email'];?>">
             </div>
-            <input type="submit" name="btn-editar" value="EDITAR"/>
+            <input type="submit" name="btn-editar" value="EDITAR">
         </form>
     </div>
   </body>

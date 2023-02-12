@@ -10,7 +10,7 @@ include_once 'includes/message.php';
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
-    <title>Livro</title>
+    <title>Autores</title>
 </head>
     <body>
     <header>
@@ -21,8 +21,7 @@ include_once 'includes/message.php';
     </header>
     <div class="card-cadastro">
         <form class="card-list">
-        <h4 class ="light">Autores</h4>
-        <table class ="striped">
+        <h4>Autores</h4>
         <table>
             <thread>
                 <tr>
@@ -87,20 +86,8 @@ include_once 'includes/message.php';
                 ?>
             </tbody>
         </table>
-        <br>
         <a href="adicionar.php" type="submit">Adicionar Autor </a>
-        <a href="organizar-fornecedores.php" class="btn deep-purple lighten-2"><i class="material-icons left">workspace_premium</i>Verificar Autores</a>
-        <br>
-                <button class="btn-floating btn-small waves-effect waves-light red darken-1" 
-                style="width: 50px; height: 50px; right: -95%; buttom: 0%"
-                title="Sair" aria-pressed="false"> 
-                <a href="../logout.php" class ="" ><i class="material-icons">exit_to_app</i></a>
-                </button>
-                <br> 
-        </div>
+        </form>
     </div>
-</div>
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>
+    </body>
+</html>
