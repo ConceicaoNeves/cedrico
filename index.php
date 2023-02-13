@@ -1,46 +1,31 @@
-
 <?php
-//conexão
-require_once ('../cedrico/administrador/php_action/bdconnect.php');
+include("bdconnect.php");
 
-session_start();
+    if(isset($_POST["ENTRAR"])){
+        $login = $_POST["login"];
 
-//BOTAO ENVIAR
-if(isset($_POST['ENTRAR'])):
-    $erros = array();
-    $login = mysqli_escape_string($connect, $_POST['login']);
-    $senha = mysqli_escape_string($connect, $_POST['senha']);
+        $sql = "SELECT senha, idAdmin FROM administrador WHERE login='$login'";
 
-    if(empty($login) or empty($senha)):
-        $erros[] = " <li> Todos os campos devem ser preenchidos </li>";
-    else:
-        $sql = "SELECT login FROM administrador WHERE login = '$login'";
-        $resultado = mysqli_query($connect, $sql);
+        $res = $conn->query($sql);
 
-        if(mysqli_num_rows($resultado) > 0):
-            $senha = md5($senha);
+        if(!$res){
+            print "<script>alert('Usuario não encontrado')</script>";
+           return;
+        }
 
-            $sql = "SELECT * FROM administrador WHERE login = '$login' AND senha ='$senha' ";
-            $resultado = mysqli_query($connect, $sql);
-            mysqli_close($connect);
-            
-            if(mysqli_num_rows($resultado) == 1):
-                $dados = mysqli_fetch_array($resultado);
-                $_SESSION['logado'] = true;
-                $_SESSION['idAdmin'] = $dados['id'];
-                header('Location: home.php');
-            else:
-                $erros[] = "<li> Usuário e Senha não conferem </li>";
-            endif;
+        $row = $res->fetch_object();
 
-        else:
-            $erro[] = "<li> Usuário Inexistente </li>";
-        endif;
+        if($row->senha != $_POST["pass"]){
+            print "<script>alert('Senha incorreta')</script>";
+            return;
+        }
+        else    $_SESSION["log"] = $row->idAdmin;
 
-    endif;
+        print "<script>location.href='home.php';</script>";
 
-endif;
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -70,9 +55,9 @@ endif;
         </div>
         <div class="input-text">
           <label for="password">Senha:</label>
-          <input type="password" id="password" name="senha" />
+          <input type="password" id="password" name="pass" />
         </div>
-        <input type="submit" value="ENTRAR" />
+        <input type="submit" value="ENTRAR" name="ENTRAR"/>
       </form>
     </div>
   </body>
