@@ -21,7 +21,7 @@ endif;
     <header>
         <a href="../autor">Voltar</a>
         <ul>
-            <li><a href="login.html">Sair</a></li>
+            <li><a href="../logout.php">Sair</a></li>
         </ul>
     </header>
         </header>
