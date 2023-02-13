@@ -12,6 +12,7 @@ include_once '../venda/php_action/connect.php';
     <meta name="viewport" content="width=device-width" />
     <title>Relatório</title>
   </head>
+
   <body>
     <header>
       <a href="vendas.html">Voltar</a>
