@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <a href="index.html">Logo</a>
+      <a href="index.php">Logo</a>
       <ul>
         <li><a href="logout.php">Sair</a></li>
       </ul>
