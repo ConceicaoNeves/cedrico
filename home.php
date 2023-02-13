@@ -11,7 +11,7 @@
     <header>
       <a href="index.php">Logo</a>
       <ul>
-        <li><a href="../cedrico/logout.php">Sair</a></li>
+        <li><a href="logout.php">Sair</a></li>
       </ul>
     </header>
     <section>
@@ -23,7 +23,7 @@
         <img src="assets/icons/carrinho.png" alt="" />
         <p>Vendas</p>
       </a>
-      <a href="/venda/relatorio2.php">
+      <a href="/venda/relatorio.php">
         <img src="assets/icons/relatorio4.png" alt="" />
         <p>Relatório</p>
       </a>
