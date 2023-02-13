@@ -7,8 +7,6 @@ if (isset($_GET['idEditora'])):
     $resultado = mysqli_query($connect, $sql);
     $dados = mysqli_fetch_array($resultado);
 endif;
-
-
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
