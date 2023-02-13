@@ -14,7 +14,7 @@ include_once '../venda/php_action/connect.php';
   </head>
   <body>
     <header>
-      <a href="index.html">Voltar</a>
+      <a href="vendas.html">Voltar</a>
       <ul>
         <li><a href="login.html">Sair</a></li>
       </ul>
