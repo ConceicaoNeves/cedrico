@@ -66,7 +66,10 @@ include_once 'includes/message.php';
                 <?php 
                 endif;
                 ?>
-           </form>
+                </tbody>
+                </table>
+                <a type="submit" href="adicionar.php">NOVA VENDA</a>
+           </form>>
         </div> 
     </body>
 </html>
