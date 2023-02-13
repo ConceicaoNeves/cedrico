@@ -42,7 +42,7 @@ include 'includes/message.php';
         </div>
         <div class="input-text">
           <label for="preco">Preço:</label>
-          <select  id="preco" name="preco">
+          <select  id="preco" name="preco" onchange="calculateTotal()">
             <option value="text">Preço</option>
             <?php
 				$sql="SELECT preco,idLivro,titulo
@@ -61,11 +61,23 @@ include 'includes/message.php';
           <input class="validate" type="date" name="dataVenda" id="dataVenda">
         </div>
         <div class="input-text">
-          <label for="editora">Cpf Comprador:</label>
-          <input type="text" name="cpfComprador" id="cpfComprador">
+          <label for="quantidade">Quantidade:</label>
+          <input type="text" name="quantidade" id="quantidade" onchange="calculateTotal()">
+        </div>
+         <div class="input-text">
+          <label for="total">Total:</label>
+          <input type="text" name="total" id="total" readonly>
         </div>
         <input type="submit" name="btn-registrarnovavenda" value="CADASTRAR" />
       </form>
+      <script>
+        function calculateTotal() {
+          var preco = document.getElementById("preco").value;
+          var quantidade = document.getElementById("quantidade").value;
+          var total = preco * quantidade;
+          document.getElementById("total").value = total;
+        }
+      </script>
     </div>
   </body>
 </html>
