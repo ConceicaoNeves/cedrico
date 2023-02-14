@@ -18,7 +18,7 @@
 
   <body>
     <header>
-      <a href="vendas.html">Voltar</a>
+      <a href="vendas.php">Voltar</a>
       <ul>
         <li><a href="../logout.php">Sair</a></li>
       </ul>

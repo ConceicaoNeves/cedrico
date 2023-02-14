@@ -17,7 +17,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
 </head>
     <body>
     <header>
-      <a href="../cadastro.html">Voltar</a>
+      <a href="../cadastro.php">Voltar</a>
       <ul>
         <li><a href="../logout.php">Sair</a></li>
       </ul>

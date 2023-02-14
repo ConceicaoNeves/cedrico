@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <a href="../home.html">Voltar</a>
+        <a href="../home.php">Voltar</a>
         <ul>
             <li><a href="../logout.php">Sair</a></li>
         </ul>
