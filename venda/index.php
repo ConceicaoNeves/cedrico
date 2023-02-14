@@ -1,12 +1,10 @@
 <?php
 //Header
-include_once 'php_action/connect.php';
+include('bdconnect.php');
 include_once 'includes/header.php';
-include_once 'includes/message.php';
-//session_start();
-//if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
 
-//print "<h1>.".$_SESSION["log"]."</h1>";
+session_start();
+if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">

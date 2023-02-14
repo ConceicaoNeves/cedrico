@@ -1,7 +1,6 @@
 <?php
 //Header
-include "../venda/php_action/connect.php";
-include 'includes/message.php';
+include('bdconnect.php');
 
 session_start();
 if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
