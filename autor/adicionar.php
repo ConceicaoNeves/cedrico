@@ -1,6 +1,10 @@
 <?php
 //Header
 include_once 'includes/message.php';
+
+session_start();
+if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">

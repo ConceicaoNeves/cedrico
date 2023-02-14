@@ -11,6 +11,6 @@ $conn = new MySQLi($servername, $username, $password, $db_name);
 session_start();
     if(!$_SESSION["on"]){
         $_SESSION["on"] = true;
-        $_SESSION["log"] = 0;
+        $_SESSION["log"] = false;
     }
 ?>

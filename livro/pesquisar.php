@@ -2,6 +2,9 @@
 include '../livro/php.action/connect-bd.php';
 //Header
 include_once '../livro/includes/header.php';
+session_start();
+if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+
 ?> 
 <body style="background-color: #8b7293">
 <body background="../atestes.png"> 

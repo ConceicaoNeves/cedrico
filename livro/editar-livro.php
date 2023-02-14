@@ -2,6 +2,9 @@
 //conexao
 include_once '../livro/php.action/connect-bd.php';
 //Select
+  session_start();
+  if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+
 if(isset($_GET['idLivro'])):
     $idLivro = mysqli_escape_string($connect, $_GET['idLivro']);
 

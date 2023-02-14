@@ -86,8 +86,8 @@ header a {
 }
 
 .input-text {
-    background-color: #1a120b;
-    width: 10%;
+    background-color: #d5cea3;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: start;

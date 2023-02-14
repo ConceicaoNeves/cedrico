@@ -1,7 +1,10 @@
 <?php
-//Header
-include_once 'includes/header.php';
-include_once '../venda/php_action/connect.php';
+  //Header
+  include_once 'includes/header.php';
+  include_once '../venda/php_action/connect.php';
+
+  session_start();
+  if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">

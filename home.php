@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -15,11 +19,11 @@
       </ul>
     </header>
     <section>
-      <a href="cadastro.html">
+      <a href="cadastro.php">
         <img src="assets/icons/livraria.png" alt="" />
         <p>Livraria</p>
       </a>
-      <a href="/venda/vendas.html">
+      <a href="/venda/vendas.php">
         <img src="assets/icons/carrinho.png" alt="" />
         <p>Vendas</p>
       </a>

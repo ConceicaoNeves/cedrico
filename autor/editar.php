@@ -1,6 +1,10 @@
 <?php
 //Header
 include_once 'php_action/bdconnect.php';
+
+session_start();
+if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+
 if (isset($_GET['idAutor'])):
     $idAutor = mysqli_escape_string($connect, $_GET['idAutor']);
     $sql = "SELECT * FROM autor WHERE idAutor ='$idAutor'";

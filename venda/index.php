@@ -3,6 +3,11 @@
 include_once 'php_action/connect.php';
 include_once 'includes/header.php';
 include_once 'includes/message.php';
+
+session_start();
+if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+
+print "<h1>.".$_SESSION["log"]."</h1>";
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">

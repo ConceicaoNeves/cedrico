@@ -1,3 +1,8 @@
+<!--
+  session_start();
+  if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
+  print "<h1>.".$_SESSION["log"]."</h1>";
+ -->
 <?php
 include("bdconnect.php");
 
@@ -14,10 +19,10 @@ include("bdconnect.php");
         }
 
         $row = $res->fetch_object();
-
+        
         if($row->senha != $_POST["pass"]){
             print "<script>alert('Senha incorreta')</script>";
-            return;
+            print "<script>location.href='index.php';</script>";
         }
         else    $_SESSION["log"] = $row->idAdmin;
 
