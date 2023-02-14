@@ -10,7 +10,7 @@ if(isset($_POST['btn-editar'])):
     $senha = mysqli_escape_string($connect, $_POST['senha']);
 
     $idAdmin = mysqli_escape_string($connect, $_POST['idAdmin']);
-    $sql = "UPDATE administrador SET nomeAdmin='$nomeAdmin', sobrenomeAdmin = '$sobrenomeAdmin', login = '$login', senha = MD5('$senha') WHERE idAdmin = '$idAdmin'";
+    $sql = "UPDATE administrador SET nomeAdmin='$nomeAdmin', sobrenomeAdmin = '$sobrenomeAdmin', login = '$login', senha = '$senha' WHERE idAdmin = '$idAdmin'";
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = "Atualizado com sucesso!";
         header('Location: ../index.php');
