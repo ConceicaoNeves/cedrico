@@ -59,10 +59,17 @@ include("bdconnect.php");
           <input type="text" id="login"  name="login"/>
         </div>
         <div class="input-text">
+<<<<<<< Updated upstream
           <label for="password">Senha:</label>
           <input type="password" id="password" name="pass" />
         </div>
         <input type="submit" value="ENTRAR" name="ENTRAR"/>
+=======
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" />
+        </div>
+        <button input type="submit" value="ENTRAR" > Entrar</button>
+>>>>>>> Stashed changes
       </form>
     </div>
   </body>
