@@ -1,7 +1,6 @@
 <?php
 
 include_once 'connect-bd.php';
-include "../includes/message.php";
 
 //clear
 function clear($input) {
