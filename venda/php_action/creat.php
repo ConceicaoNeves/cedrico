@@ -3,10 +3,11 @@
 require_once 'connect.php';
 
 //clear
-function clear($input) {
+function clear($input)
+{
     global $connect;
     //sql
-    $var = mysqli_escape_string($connect,$input);
+    $var = mysqli_escape_string($connect, $input);
     //xss
     $var = htmlspecialchars($var);
 
@@ -14,45 +15,35 @@ function clear($input) {
 }
 
 
-if(isset($_POST['btn-registrarnovavenda'])):
-    $idLivro = clear($_POST['idLivro']);
+if (isset($_POST['btn-registrarnovavenda'])) :
+    $idLivro = ($_POST['idLivro']);
     $preco = clear(floatval($_POST['preco']));
-    $dataVenda = clear($_POST['dataVenda']);
-    $quantidade = mysqli_escape_string($connect, $_POST['quantidade']);
+    $quantidade = $_POST['quantidade'];
     $total = $_POST['total'];
+    $totalFinal = $_POST['totalFinal'];
+    $dataVenda = clear($_POST['dataVenda']);
 
-    if (!is_numeric($preco) || !is_numeric($quantidade)) {
-        $_SESSION['mensagem'] = "Venda não realizada!! Valores de preço e quantidade devem ser números válidos.";
-        header('Location: ../index.php');
-    }
-    if ($quantidade <= 0) {
-        $_SESSION['mensagem'] = "Venda não realizada!! A quantidade deve ser um número positivo.";
-        header('Location: ../index.php');
-      }
-      
-      if (!$connect) {
-        $_SESSION['mensagem'] = "Venda não realizada!! Não foi possível conectar ao banco de dados.";
-        header('Location: ../index.php');
-      }
-          
-      
-    if(empty($idLivro) or empty($preco) or empty($dataVenda)):
-        $_SESSION['mensagem'] = "Venda não realizado!! Campos preenchidos incorretamente!";
-        header('Location: ../index.php');
-    else:
-    
 
-        $sql = "INSERT INTO venda (idLivro, preco, dataVenda, quantidade, total) 
-VALUES ('$idLivro', '$preco', '$dataVenda', '$quantidade', '$total')";
+    if (empty($idLivro) or empty($preco) or empty($dataVenda)) :
+        //$_SESSION['mensagem'] = "Venda não realizado!! Campos preenchidos incorretamente!";
+        header('Location: ../index.php');
+    else :
+        $sql = "INSERT INTO venda (dataVenda, totalFinal) VALUES ('$dataVenda', '$totalFinal')";
 
-        if(mysqli_query($connect, $sql)):
-            $_SESSION['mensagem'] = "Venda registrada!";
+        if (mysqli_query($connect, $sql)) :
+            $idVenda = mysqli_fetch_row(mysqli_query($connect, "SELECT MAX(idVenda) FROM venda"))[0];
+            for($i=0; $i < count($idLivro); $i++) {
+                $sql2 = "INSERT INTO livro_venda (idLivro, idVenda, preco, quantidade, total) VALUES ($idLivro[$i], $idVenda, '$preco[$i]', '$quantidade[$i]', '$total[$i]')";
+                mysqli_query($connect, $sql2);
+            }
+
+            // $_SESSION['mensagem'] = "Venda registrada!";
             header('Location: ../index.php');
-        else:
-            $_SESSION['mensagem'] = "Venda não registrada!";
+        else :
+            //  $_SESSION['mensagem'] = "Venda não registrada!";
             header('Location: ../index.php');
         endif;
-        
+
     endif;
 
 endif;

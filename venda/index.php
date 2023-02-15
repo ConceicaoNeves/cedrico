@@ -30,9 +30,6 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
             <thread>
                 <tr>
                     <th>idVenda</th>
-                    <th>Livro</th>
-                    <th>Valor Unitário</th>
-                    <th>Quantidade</th>
                     <th>Total</th>
                     <th>Data</th>  
                 </tr>
@@ -48,19 +45,14 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     ?>
                     <tr>
                         <td><?php echo $dados["idVenda"]; ?></td>
-                        <td><?php echo $dados["idLivro"]; ?></td>
-                        <td><?php echo $dados["preco"]; ?></td>
-                        <td><?php echo $dados["quantidade"]; ?></td>
-                        <td><?php echo $dados["total"]; ?></td>
+                        <td><?php echo $dados["totalFinal"]; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
+                        
                     </tr>
                     <?php 
                     endwhile;
                 else: ?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
