@@ -1,7 +1,7 @@
 <?php
     include("bdconnect.php");
 
-    $login = $_REQUEST["lofin"];
+    $login = $_REQUEST["login"];
 
     $sql = "SELECT idAdmin FROM administrador WHERE login='$login'";
 
