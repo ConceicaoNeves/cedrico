@@ -47,10 +47,6 @@ endif;
             </thread>
             <tbody>
                 <?php
-                
-        
-
-                    
                     $sql2 = "SELECT livro_venda.*, livro.* 
                     FROM livro_venda 
                     INNER JOIN livro ON livro_venda.idLivro = livro.idLivro 
