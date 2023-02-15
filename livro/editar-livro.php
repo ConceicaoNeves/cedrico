@@ -5,24 +5,24 @@ include_once '../livro/php.action/connect-bd.php';
   session_start();
   if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>";
 
-if(isset($_GET['idLivro'])):
-    $idLivro = mysqli_escape_string($connect, $_GET['idLivro']);
+  if(isset($_GET['idLivro'])):
+      $idLivro = mysqli_escape_string($connect, $_GET['idLivro']);
 
-    $sql = "SELECT * FROM livro WHERE idLivro = '$idLivro'";
-    $resultado = mysqli_query($connect, $sql);
-    $dados = mysqli_fetch_array($resultado);
+      $sql = "SELECT * FROM livro WHERE idLivro = '$idLivro'";
+      $resultado = mysqli_query($connect, $sql);
+      $dados = mysqli_fetch_array($resultado);
 
-    $nomeEdit  = $dados['idEditora'];
-    $sql1 = "SELECT  nomeEditora FROM editora WHERE idEditora = '$nomeEdit'";
-    $resultado = mysqli_query($connect, $sql1);
-    $dados1 = mysqli_fetch_array($resultado);
+      $nomeEdit  = $dados['idEditora'];
+      $sql1 = "SELECT  nomeEditora FROM editora WHERE idEditora = '$nomeEdit'";
+      $resultado = mysqli_query($connect, $sql1);
+      $dados1 = mysqli_fetch_array($resultado);
 
-    $nomeAut  = $dados['idAutor'];
-    $sql2 = "SELECT  nomeAutor FROM autor WHERE idAutor = '$nomeAut'";
-    $resultado = mysqli_query($connect, $sql2);
-    $dados2 = mysqli_fetch_array($resultado);
+      $nomeAut  = $dados['idAutor'];
+      $sql2 = "SELECT  nomeAutor FROM autor WHERE idAutor = '$nomeAut'";
+      $resultado = mysqli_query($connect, $sql2);
+      $dados2 = mysqli_fetch_array($resultado);
 
-endif;
+  endif;
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>Editar Livro</title>
-</head>
+  </head>
     <body>
     <header>
       <a href="../livro/index.php">Voltar</a>
@@ -67,17 +67,17 @@ endif;
         </div>
         <div class="input-text">
         <select  name="idAutor"  id="idAutor">
-                <option value="<?php echo $dados['idAutor'];?>">Autor: <?php echo $dados2['nomeAutor'];?></option>
-                <?php
-                    $sql="SELECT idAutor,idAutor, nomeAutor, nacionalidade
-                    from autor";
+          <option value="<?php echo $dados['idAutor'];?>">Autor: <?php echo $dados2['nomeAutor'];?></option>
+          <?php
+              $sql="SELECT idAutor,idAutor, nomeAutor, nacionalidade
+              from autor";
 
-                    $result=mysqli_query($connect,$sql);
+              $result=mysqli_query($connect,$sql);
 
-                    while ($autor=mysqli_fetch_row($result)):
-                        ?>
-                        <option value="<?php echo $autor[0] ?>"><?php echo $autor[1]." - ".$autor[2]." - ".$autor[3] ?></option>
-                    <?php endwhile; ?>
+              while ($autor=mysqli_fetch_row($result)):
+                  ?>
+                  <option value="<?php echo $autor[0] ?>"><?php echo $autor[1]." - ".$autor[2]." - ".$autor[3] ?></option>
+              <?php endwhile; ?>
         </select>
         </div>
 

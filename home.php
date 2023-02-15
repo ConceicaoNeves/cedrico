@@ -37,7 +37,7 @@
       </a>
     </section>
     <footer>
-      <p>Desenvolvido por Maryso</p>
+        <p>Desenvolvido por RUBIK</p>
     </footer>
   </body>
 </html>

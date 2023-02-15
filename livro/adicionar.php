@@ -14,8 +14,8 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>Cadastrar Livro</title>
-</head>
-    <body>
+  </head>
+  <body>
     <header>
       <a href="../livro/index.php">Voltar</a>
       <ul>
@@ -61,16 +61,16 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
         </div>
         <div class="input-text">
         <select class="select" id="idEditora" name="idEditora">
-             <option value="text" disabled selected>Escolha a Editora</option>
-                <?php
-                $sql="SELECT idEditora,idEditora, nomeEditora,cidade
-                from editora";
-                 $result=mysqli_query($connect,$sql);
+          <option value="text" disabled selected>Escolha a Editora</option>
+            <?php
+            $sql="SELECT idEditora,idEditora, nomeEditora,cidade
+            from editora";
+              $result=mysqli_query($connect,$sql);
 
-                 while ($editora=mysqli_fetch_row($result)):
-                        ?>
-                <option value="<?php echo $editora[0] ?>"><?php echo $editora[1]." - ".$editora[2]." - ".$editora[3] ?></option>
-                <?php endwhile; ?>
+              while ($editora=mysqli_fetch_row($result)):
+                    ?>
+            <option value="<?php echo $editora[0] ?>"><?php echo $editora[1]." - ".$editora[2]." - ".$editora[3] ?></option>
+            <?php endwhile; ?>
         </select>
         </div>
         <input type="submit" name="btn-cadastrar" value="CADASTRAR"/>

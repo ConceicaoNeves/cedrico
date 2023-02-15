@@ -26,7 +26,6 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
         <form class="card-list">
         <h4>Vendas</h4>
         <table class ="striped">
-        
             <thread>
                 <tr>
                     <th>idVenda</th>
@@ -47,7 +46,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                         <td><?php echo $dados["idVenda"]; ?></td>
                         <td><?php echo $dados["totalFinal"]; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
-                        <td><a href="visualizarvenda.php?idVenda=<?php echo $dados['idVenda']; ?>" class ="btn-floating light-green"><i class ="material-icons">edit</i></a></td>
+                        <td><a href="visualizarvenda.php?idVenda=<?php echo $dados['idVenda']; ?>" class ="btn-floating light-green"><i class ="material-icons">assignment</i></a></td>
                         
                     </tr>
                     <?php 

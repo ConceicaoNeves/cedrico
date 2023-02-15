@@ -20,8 +20,8 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>Editar Editora</title>
-</head>
-    <body>
+  </head>
+  <body>
     <header>
       <a href="../editora">Voltar</a>
       <ul>
@@ -29,27 +29,27 @@ endif;
       </ul>
     </header>
     <div class="card-cadastro">
-        <form class="card" action="php_action/update.php" method="POST">
-            <h1>Editar Editora</h1>    
-            <div class="input-text">
-                <input type= "hidden" name = "idEditora" value="<?php echo $dados['idEditora'];?>">
-                <label for="nomeEditora">Nome</label>
-                <input type="text" name="nomeEditora" id="nomeEditora"  value="<?php echo $dados['nomeEditora'];?>">   
-            </div>
-            <div class="input-text">
-                <label for="telefone">Telefone</label>
-                <input type="tel" name="telefone" id="telefone" value="<?php echo $dados['telefone'];?>">  
-            </div>
-            <div class="input-text">
-                <label for="cidade">Cidade</label>
-                <input class="validate" type="text" name="cidade" id="cidade" value="<?php echo $dados['cidade'];?>">
-            </div>
-            <div class="input-text">
-                <label for="email">Email</label>    
-                <input type="email" name="email" id="email" value="<?php echo $dados['email'];?>">
-            </div>
-            <input type="submit" name="btn-editar" value="EDITAR">
-        </form>
+      <form class="card" action="php_action/update.php" method="POST">
+        <h1>Editar Editora</h1>    
+        <div class="input-text">
+          <input type= "hidden" name = "idEditora" value="<?php echo $dados['idEditora'];?>">
+          <label for="nomeEditora">Nome</label>
+          <input type="text" name="nomeEditora" id="nomeEditora"  value="<?php echo $dados['nomeEditora'];?>">   
+        </div>
+        <div class="input-text">
+          <label for="telefone">Telefone</label>
+          <input type="tel" name="telefone" id="telefone" value="<?php echo $dados['telefone'];?>">  
+        </div>
+        <div class="input-text">
+          <label for="cidade">Cidade</label>
+          <input class="validate" type="text" name="cidade" id="cidade" value="<?php echo $dados['cidade'];?>">
+        </div>
+        <div class="input-text">
+          <label for="email">Email</label>    
+          <input type="email" name="email" id="email" value="<?php echo $dados['email'];?>">
+        </div>
+        <input type="submit" name="btn-editar" value="EDITAR">
+      </form>
     </div>
   </body>
 </html>

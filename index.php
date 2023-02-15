@@ -27,7 +27,6 @@ include("bdconnect.php");
         else    $_SESSION["log"] = $row->idAdmin;
 
         print "<script>location.href='home.php';</script>";
-
     }
 ?>
 

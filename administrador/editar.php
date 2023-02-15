@@ -20,8 +20,8 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>Editar Administrador</title>
-</head>
-    <body>
+  </head>
+  <body>
     <header>
       <a href="../administrador/index.php">Voltar</a>
       <ul>

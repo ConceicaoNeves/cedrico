@@ -81,10 +81,6 @@
         <td> 
         <input type="submit" value="IMPRIMIR"/>
         </td>  
-        </div>
-        </div>
-    </div>  
-    <br>
       </form>
     </div>
   </body>
