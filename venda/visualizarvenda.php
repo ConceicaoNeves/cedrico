@@ -47,11 +47,12 @@ endif;
             </thread>
             <tbody>
                 <?php
-                    $sql2 = "SELECT livro_venda.*, livro.* 
-                    FROM livro_venda 
-                    INNER JOIN livro ON livro_venda.idLivro = livro.idLivro 
+            
+                    $sql2 = "SELECT *, livro.titulo FROM livro_venda
+                    INNER JOIN livro ON livro.idLivro = livro_venda.idLivro
                     WHERE livro_venda.idVenda = '$idVenda'";
                     $result = mysqli_query($connect, $sql2);
+
                     if(mysqli_num_rows($result)>0):
                     while ($venda = mysqli_fetch_assoc($result)) {
                         //echo $livro[0];
@@ -59,7 +60,7 @@ endif;
                     <tr>
                         <td><?php echo $venda["idVenda"]; ?></td>
                         <td><?php echo $venda["idVL"]; ?></td>
-                        <td><?php echo $venda["idLivro"]; ?></td>
+                        <td><?php echo $venda["titulo"]; ?></td>
                         <td><?php echo $venda["preco"]; ?></td>
                         <td><?php echo $venda["quantidade"]; ?></td>
                         <td><?php echo $venda["total"]; ?></td>
