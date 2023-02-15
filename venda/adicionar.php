@@ -31,38 +31,23 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
         <button onclick="serviceAddFields()"> (+)</button>
         <div class="novoProduto">
           <div id="service">
-          <label for="idLivro">Livro:</label>
-            <select id="idLivro" name="idLivro[]">
-              <option value="text" disabled selected>Escolha o Livro</option>
-              <?php
-              $sql = "SELECT idLivro, idLivro, titulo, preco
-				from livro";
-
-              $result = mysqli_query($connect, $sql);
-
-              while ($livro = mysqli_fetch_row($result)) :
-              ?>
-                <option value="<?php echo $livro[0] ?>"><?php echo $livro[1] . " - " . $livro[2] . " - " . $livro[3] . ",00" ?></option>
-              <?php endwhile;
-              ?>
-
-            </select>
+  
+          <input type="hidden" id="idLivro" name="idLivro[]" value="">
       
           <div class="input-text">
-            <label for="preco">Preço:</label>
-            <select id="preco" name="preco[]" onchange="calculateTotal('preco', 'quantidade', 'total')">
-              <option value="text">Preço</option>
-              <?php
-              $sql = "SELECT preco,idLivro,titulo from livro";
-
+          <label for="preco">Livro:</label>
+          <select id="preco" name="preco[]" onchange="calculateTotal('preco', 'quantidade', 'total'), atualizaIdLivro()">
+            <option value="text">Preço</option>
+            <?php
+              $sql = "SELECT preco, idLivro, titulo FROM livro";
               $result = mysqli_query($connect, $sql);
 
               while ($valor = mysqli_fetch_row($result)) :
-              ?>
-                <option value="<?php echo $valor[0] ?>"><?php echo $valor[1] . " - " . $valor[2] . " - " . $valor[0] . ",00" ?></option>
-              <?php endwhile; ?>
-
-            </select>
+            ?>
+            <option value="<?php echo $valor[0] ?>" data-id="<?php echo $valor[1] ?>"><?php echo $valor[2] . " - " . $valor[0] . ",00" ?></option>
+            <?php endwhile; ?>
+          </select>
+        </div>
 
             <div class="input-text">
               <label for="quantidade">Quantidade:</label>
@@ -72,7 +57,7 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
               <label for="total">Total:</label>
               <input type="text" name="total[]" id="total" readonly>
             </div>
-          </div>
+          
           </div>
         </div>
         <div class="input-text">
@@ -119,6 +104,12 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
         var totalM = parseInt(preco) * parseInt(quantidade);
         document.getElementById(total).value = totalM;
       }
+
+      function atualizaIdLivro() {
+  var precoSelecionado = document.getElementById("preco").value;
+  var idLivroSelecionado = document.getElementById("preco").options[document.getElementById("preco").selectedIndex].getAttribute("data-id");
+  document.getElementById("idLivro").value = idLivroSelecionado;
+}
     </script>
 
   </div>
