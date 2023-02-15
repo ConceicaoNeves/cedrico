@@ -28,7 +28,6 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
     <form class="card" action="../venda/php_action/creat.php" method="POST">
       <h1>CADASTRAR VENDA</h1>
       <div class="input-text">
-        <button onclick="serviceAddFields()"> (+)</button>
         <div class="novoProduto">
           <div id="service">
   
@@ -64,6 +63,7 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
           <label for="dataVenda">Data:</label>
           <input class="validate" type="date" name="dataVenda" id="dataVenda">
         </div>
+        <button onclick="serviceAddFields()">ADICIONAR LIVRO</button>
         <div class="input-text">
           <label for="totalFinal">Total Final:</label>
           <input type="text" name="totalFinal" id="totalFinal" readonly>

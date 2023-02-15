@@ -86,7 +86,6 @@ header a {
 }
 
 .input-text {
-    background-color: #d5cea3;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -133,6 +132,23 @@ header a {
     margin-top: 20px;
     font-weight: bolder;
     cursor: pointer;
+}
+
+.card button {
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background: #524038;
+    border: 3px solid #1a120b;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
 }
 
 .card-cadastro a[type="submit"] {
