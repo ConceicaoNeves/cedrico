@@ -13,7 +13,7 @@ if (isset($_GET['idVenda'])):
     $dados = mysqli_fetch_array($resultado);
 endif;
 ?> 
-?> 
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
