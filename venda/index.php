@@ -29,7 +29,6 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
             <thread>
                 <tr>
                     <th>idVenda</th>
-                    <th>Total</th>
                     <th>Data</th>  
                     <th></th>  
                 </tr>
@@ -45,7 +44,6 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     ?>
                     <tr>
                         <td><?php echo $dados["idVenda"]; ?></td>
-                        <td><?php echo $dados["totalFinal"]; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
                         <td><a href="visualizarvenda.php?idVenda=<?php echo $dados['idVenda']; ?>" class ="btn-floating light-green"><i class ="material-icons">assignment</i></a></td>
                         
@@ -54,7 +52,6 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     endwhile;
                 else: ?>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

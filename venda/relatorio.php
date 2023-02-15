@@ -55,7 +55,7 @@
                 } else {
                 $dataInicio = mysqli_escape_string($connect, $_GET['dataInicio']);
                 $dataFinal = mysqli_escape_string($connect, $_GET['dataFinal']);
-                $sql = "SELECT idVenda, idLivro, preco, dataVenda FROM venda WHERE dataVenda >= '$dataInicio' and dataVenda <= '$dataFinal' ORDER BY dataVenda;";
+                $sql = "SELECT idVenda, dataVenda FROM venda WHERE dataVenda >= '$dataInicio' and dataVenda <= '$dataFinal' ORDER BY dataVenda;";
                 $resultado = mysqli_query($connect, $sql);
 
                 if(mysqli_num_rows($resultado) > 0):
@@ -64,8 +64,8 @@
                     ?>
                         <tr>
                             <td><?php echo $dados['idVenda']; ?></td>
-                            <td><?php echo $dados['idLivro']; ?></td>
-                            <td><?php echo $dados['preco']; ?></td>
+                            <td><?php //echo $dados['idLivro']; ?></td>
+                            <td><?php //echo $dados['preco']; ?></td>
                             <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
                             <?php endwhile;
                     else: ?>

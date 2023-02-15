@@ -29,35 +29,35 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
       <h1>CADASTRAR VENDA</h1>
       <div class="input-text">
         <div class="novoProduto">
-        <div id="service">
-  
-  <input type="hidden" id="idLivro" name="idLivro[]" value="">
+          <div id="service">
 
-  <div class="input-text">
-  <label for="preco">Livro:</label>
-  <select id="preco" name="preco[]" onchange="calculateTotal('preco', 'quantidade', 'total'), atualizaIdLivro('preco', 'idLivro')">
-    <option value="text">Preço</option>
-    <?php
-      $sql = "SELECT preco, idLivro, titulo FROM livro";
-      $result = mysqli_query($connect, $sql);
+            <input type="hidden" id="idLivro" name="idLivro[]" value="">
 
-      while ($valor = mysqli_fetch_row($result)) :
-    ?>
-    <option value="<?php echo $valor[0] ?>" data-id="<?php echo $valor[1] ?>"><?php echo $valor[2] . " - " . $valor[0] . ",00" ?></option>
-    <?php endwhile; ?>
-  </select>
-</div>
+            <div class="input-text">
+              <label for="preco">Livro:</label>
+              <select id="preco" name="preco[]" onchange="calculateTotal('preco', 'quantidade', 'total'), atualizaIdLivro('preco', 'idLivro')">
+                <option value="text">Preço</option>
+                <?php
+                $sql = "SELECT preco, idLivro, titulo FROM livro";
+                $result = mysqli_query($connect, $sql);
 
-    <div class="input-text">
-      <label for="quantidade">Quantidade:</label>
-      <input type="text" name="quantidade[]" id="quantidade" onchange="calculateTotal('preco', 'quantidade', 'total')">
-    </div>
-    <div class="input-text">
-      <label for="total">Total:</label>
-      <input type="text" name="total[]" id="total" readonly>
-    </div>
-  
-  </div>
+                while ($valor = mysqli_fetch_row($result)) :
+                ?>
+                  <option value="<?php echo $valor[0] ?>" data-id="<?php echo $valor[1] ?>"><?php echo $valor[2] . " - " . $valor[0] ?></option>
+                <?php endwhile; ?>
+              </select>
+            </div>
+
+            <div class="input-text">
+              <label for="quantidade">Quantidade:</label>
+              <input type="text" name="quantidade[]" id="quantidade" onchange="calculateTotal('preco', 'quantidade', 'total')">
+            </div>
+            <div class="input-text">
+              <label for="total">Total:</label>
+              <input type="text" name="total[]" id="total" readonly>
+            </div>
+
+          </div>
         </div>
         <div class="input-text">
           <label for="dataVenda">Data:</label>
@@ -72,32 +72,31 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    
-    let contador = 1
+      let contador = 1
 
-    let servicesConteiner = document.querySelector(".novoProduto");
-        let service = document.querySelector("#service")
+      let servicesConteiner = document.querySelector(".novoProduto");
+      let service = document.querySelector("#service")
 
-        function serviceAddFields() {
-            event.preventDefault()
-            let elementos = $('#service').clone()
+      function serviceAddFields() {
+        event.preventDefault()
+        let elementos = $('#service').clone()
 
-            var idLivro = "idLivro" + contador
-            var idPreco = "preco" + contador
-            var idQuantidade = "quantidade" + contador
-            var idTotal = "total" + contador
-            elementos.find('#idLivro').attr('id', idLivro)
-            elementos.find('#preco').attr('id', idPreco)
-            // elementos.find('#preco').attr('onchange', "")
-            elementos.find('#'+idPreco).attr('onchange', "calculateTotal('"+idPreco+"', '"+idQuantidade+"', '"+idTotal+"'), atualizaIdLivro('"+idPreco+"', '"+idLivro+"')")
-            elementos.find('#quantidade').attr('id', idQuantidade)
-            elementos.find('#'+idQuantidade).attr('onchange', "calculateTotal('"+idPreco+"', '"+idQuantidade+"', '"+idTotal+"')")
-            elementos.find('#total').attr('id', idTotal)
-            elementos.find('#'+idTotal).attr('onchange', "calculateTotal('"+idPreco+"', '"+idQuantidade+"', '"+idTotal+"')")
+        var idLivro = "idLivro" + contador
+        var idPreco = "preco" + contador
+        var idQuantidade = "quantidade" + contador
+        var idTotal = "total" + contador
+        elementos.find('#idLivro').attr('id', idLivro)
+        elementos.find('#preco').attr('id', idPreco)
+        // elementos.find('#preco').attr('onchange', "")
+        elementos.find('#' + idPreco).attr('onchange', "calculateTotal('" + idPreco + "', '" + idQuantidade + "', '" + idTotal + "'), atualizaIdLivro('" + idPreco + "', '" + idLivro + "')")
+        elementos.find('#quantidade').attr('id', idQuantidade)
+        elementos.find('#' + idQuantidade).attr('onchange', "calculateTotal('" + idPreco + "', '" + idQuantidade + "', '" + idTotal + "')")
+        elementos.find('#total').attr('id', idTotal)
+        elementos.find('#' + idTotal).attr('onchange', "calculateTotal('" + idPreco + "', '" + idQuantidade + "', '" + idTotal + "')")
 
-            $(".novoProduto").append(elementos)
-            contador += 1
-        }
+        $(".novoProduto").append(elementos)
+        contador += 1
+      }
 
       function calculateTotal(preco, quantidade, total) {
         var preco = document.getElementById(preco).value;
@@ -107,10 +106,10 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
       }
 
       function atualizaIdLivro(preco, idLivro) {
-      var precoSelecionado = document.getElementById(preco).value;
-      var idLivroSelecionado = document.getElementById(preco).options[document.getElementById(preco).selectedIndex].getAttribute("data-id");
-      document.getElementById(idLivro).value = idLivroSelecionado;
-    }
+        var precoSelecionado = document.getElementById(preco).value;
+        var idLivroSelecionado = document.getElementById(preco).options[document.getElementById(preco).selectedIndex].getAttribute("data-id");
+        document.getElementById(idLivro).value = idLivroSelecionado;
+      }
     </script>
   </div>
 </body>
