@@ -59,11 +59,13 @@ if ($_SESSION["log"] == false) print "<script>location.href='index.php';</script
 
           </div>
         </div>
+        <button onclick="serviceAddFields()">ADICIONAR LIVRO</button>
+        
         <div class="input-text">
           <label for="dataVenda">Data:</label>
           <input class="validate" type="date" name="dataVenda" id="dataVenda">
         </div>
-        <button onclick="serviceAddFields()">ADICIONAR LIVRO</button>
+        
         <div class="input-text">
           <label for="totalFinal">Total Final:</label>
           <input type="text" name="totalFinal" id="totalFinal" readonly>
