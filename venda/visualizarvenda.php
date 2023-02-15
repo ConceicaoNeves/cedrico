@@ -54,7 +54,7 @@ endif;
                     $sql2 = "SELECT livro_venda.*, livro.* 
                     FROM livro_venda 
                     INNER JOIN livro ON livro_venda.idLivro = livro.idLivro 
-                    WHERE livro_venda.idVenda = '$idVenda";
+                    WHERE livro_venda.idVenda = '$idVenda'";
                     $result = mysqli_query($connect, $sql2);
                     if(mysqli_num_rows($result)>0):
                     while ($venda = mysqli_fetch_assoc($result)) {
