@@ -38,7 +38,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
           </thread>
           <tbody>
             <?php
-            $sql = "SELECT * FROM Editora";
+            $sql = "SELECT * FROM editora";
             $resultado = mysqli_query($connect, $sql);
             if(mysqli_num_rows($resultado)>0):
               while($dados = mysqli_fetch_array($resultado)):

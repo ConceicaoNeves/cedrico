@@ -77,10 +77,7 @@
             }
                 ?>
             </tbody> 
-        </table>
-        <td> 
-        <input type="submit" value="IMPRIMIR"/>
-        </td>  
+        </table> 
       </form>
     </div>
   </body>
