@@ -45,8 +45,8 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     ?>
                     <tr>
                         <td><?php echo $dados["idVenda"]; ?></td>
-                        <td><?php echo  $dados['totalFinal']; ?></td>
                         <td><?php echo date('d/m/Y', $dados['dataVenda']); ?></td>
+                        <td><?php echo  $dados['totalFinal']; ?></td>
                         <td><a href="visualizarvenda.php?idVenda=<?php echo $dados['idVenda']; ?>" class ="btn-floating light-green"><i class ="material-icons">assignment</i></a></td>
                         
                     </tr>
@@ -65,7 +65,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                 </tbody>
                 </table>
                 <a type="submit" href="adicionar.php">NOVA VENDA</a>
-           </form>>
+           </form>
         </div> 
     </body>
 </html>
