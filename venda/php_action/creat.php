@@ -22,6 +22,7 @@ if (isset($_POST['btn-registrarnovavenda'])) :
     $total = $_POST['total'];
     $totalFinal = $_POST['totalFinal'];
     $dataVenda = clear($_POST['dataVenda']);
+    $totalFinal = 0;
 
 
     if (empty($idLivro) or empty($preco) or empty($dataVenda)) :
@@ -34,8 +35,12 @@ if (isset($_POST['btn-registrarnovavenda'])) :
             $idVenda = mysqli_fetch_row(mysqli_query($connect, "SELECT MAX(idVenda) FROM venda"))[0];
             for($i=0; $i < count($idLivro); $i++) {
                 $sql2 = "INSERT INTO livro_venda (idLivro, idVenda, preco, quantidade, total) VALUES ($idLivro[$i], $idVenda, '$preco[$i]', '$quantidade[$i]', '$total[$i]')";
+                $totalFinal+=$total[$i];
                 mysqli_query($connect, $sql2);
+
             }
+            $sql3 = "UPDATE venda SET totalFinal = '$totalFinal' WHERE idVenda = '$idVenda'";
+            mysqli_query($connect, $sql3);
 
             // $_SESSION['mensagem'] = "Venda registrada!";
             header('Location: ../index.php');
