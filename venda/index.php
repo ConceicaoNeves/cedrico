@@ -31,6 +31,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     <th>idVenda</th>
                     <th>Total</th>
                     <th>Data</th>  
+                    <th></th>  
                 </tr>
             </thread>
             <tbody>
@@ -53,6 +54,7 @@ if($_SESSION["log"] == false) print "<script>location.href='index.php';</script>
                     endwhile;
                 else: ?>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
